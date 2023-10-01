@@ -1,0 +1,101 @@
+small_dataset: False
+
+_type: 'imdb'
+supernet_arch: 'ofa'
+arch: 'supernet_dynamic_model'
+
+pretrained_path: "./saved_supernets/Memes-P/supernet_memes_politics_image.pth.tar"
+maxout_weights: "./saved_supernets/Memes-P/supernet_memes_politics_text.pth.tar"
+
+
+hw_lut_path: "./evaluate/backbone_eval/efficiency/lut_ofa_memes_agx.json"
+fusion_lut: "./evaluate/fusion_eval/lut_fusion_agx.json"
+
+
+batch_size: 64
+batch_size_per_gpu: 64
+post_bn_calibration_batch_num: 64
+
+augment: "auto_augment_tf"
+
+bn_momentum: 0.1
+bn_eps: 1e-5
+
+distributed: False
+distributed_val: False
+eval_only: True
+multiprocessing_distributed: True
+
+dropout: 0.2
+
+#### cloud training resources  ####
+data_loader_workers_per_gpu: 2
+
+### multimodal dataset ###
+modality: 1
+dataset: 'memes_politics'
+dir_roi: "/home/imed/Desktop/datasets/hatefull_memes/harmeme_ROI_MOMENTA/pol/harmfulness"
+dir_ent: "/home/imed/Desktop/datasets/hatefull_memes/harmeme_ENT_MOMENTA/pol/harmeme_pol_harmfulness"
+dir_data: "/home/imed/Desktop/datasets/hatefull_memes/Harmeme_HarmP_Data/data/datasets/memes/defaults"
+bpe_path: "/home/imed/Desktop/datasets/hatefull_memes/bpe_simple_vocab_16e6.txt.gz"
+context_length: 77
+extend: False
+n_classes: 3
+drop_last: True
+task : 'classification'
+resolution: 112
+in_channels: 3
+
+print_freq: 10
+seed: 42
+
+## search hyperparameters
+evo_search_outer:
+    parent_popu_size: 128
+    survival_ratio: .5
+    mutate_size: 64
+    crossover_size: 64
+    mutate_prob: 0.4
+    crossover_prob: 0.8
+    evo_iter: 4
+
+evo_search_inner:
+    # parent_popu_size: 8
+    survival_ratio: 0.25
+    # mutate_size: 4
+    # crossover_size: 4
+    # mutate_prob: 0.4
+    # crossover_prob: 0.8
+    # evo_iter: 1
+
+# ------------Fusion search parameters
+
+fusion_epochs: 50
+
+C : 192
+L : 16
+multiplier : 2
+steps : 2
+node_steps : 1
+node_multiplier : 1
+
+num_outputs : 3
+f1_type : 'weighted'
+drpt : 0.1
+
+num_input_nodes : 6
+num_keep_edges : 2
+
+arch_learning_rate : 0.0003
+arch_weight_decay : 0.001
+
+weight_decay : 0.0001
+eta_max : 0.0001 
+eta_min : 0.000001
+Ti : 1
+Tm : 2
+
+parallel : False
+
+
+save : ''

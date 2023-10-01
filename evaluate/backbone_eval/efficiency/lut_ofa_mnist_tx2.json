@@ -1,0 +1,179 @@
+{
+    "ConvLayer-input:1_1_28_28-in_ch:1-out_ch:16-kernel:3-stride:2-use_se:0-use_bn:1": {
+    "lat": "0.48573214721679686",
+    "enrg": "0.7629752292633056"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:16-mid_ch:0-expand:1-kernel:3-stride:1-use_se:0": {
+    "lat": "0.5726766967773438",
+    "enrg": "0.8223822603225708"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:48-expand:3-kernel:7-stride:2-use_se:0": {
+    "lat": "0.918768310546875",
+    "enrg": "1.2593229913711548"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:96-expand:4-kernel:7-stride:1-use_se:0": {
+    "lat": "0.9590914916992187",
+    "enrg": "1.3605180277824402"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:144-expand:6-kernel:3-stride:1-use_se:0": {
+    "lat": "0.9604905395507812",
+    "enrg": "1.2703107490539551"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:96-expand:4-kernel:3-stride:1-use_se:0": {
+    "lat": "0.9646649780273437",
+    "enrg": "1.2486340851783753"
+    },
+    "ConvLayer-input:1_24_7_7-in_ch:24-out_ch:40-kernel:1-stride:1-use_se:0-use_bn:1": {
+    "lat": "0.5093212890625",
+    "enrg": "0.7854940457344055"
+    },
+    "ConvLayer-input:1_40_1_1-in_ch:40-out_ch:80-kernel:1-stride:1-use_se:0-use_bn:0": {
+    "lat": "0.4345106506347656",
+    "enrg": "0.6968282442092896"
+    },
+    "LinearLayer-input:80-in_ch:80-out_ch:10": {
+    "lat": "0.14354885864257813",
+    "enrg": "0.39367151784896853"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:48-expand:3-kernel:5-stride:2-use_se:0": {
+    "lat": "0.9199122924804688",
+    "enrg": "1.1707401328086853"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:144-expand:6-kernel:5-stride:1-use_se:0": {
+    "lat": "0.9582093505859375",
+    "enrg": "1.383738037586212"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:72-expand:3-kernel:3-stride:1-use_se:0": {
+    "lat": "0.9269510498046875",
+    "enrg": "1.1585877504348754"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:72-expand:3-kernel:5-stride:1-use_se:0": {
+    "lat": "0.8983760986328125",
+    "enrg": "1.1608955307006836"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:96-expand:6-kernel:5-stride:2-use_se:0": {
+    "lat": "0.9387415771484375",
+    "enrg": "1.3516134896278382"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:96-expand:4-kernel:5-stride:1-use_se:0": {
+    "lat": "0.9707125854492188",
+    "enrg": "1.2552986268997193"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:144-expand:6-kernel:7-stride:1-use_se:0": {
+    "lat": "0.9433311767578125",
+    "enrg": "1.4776231298446656"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:64-expand:4-kernel:5-stride:2-use_se:0": {
+    "lat": "0.9283462524414062",
+    "enrg": "1.247683738708496"
+    },
+    "MBConvLayer-input:1_24_7_7-in_ch:24-out_ch:24-mid_ch:72-expand:3-kernel:7-stride:1-use_se:0": {
+    "lat": "0.9088760375976562",
+    "enrg": "1.273019760131836"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:48-expand:3-kernel:3-stride:2-use_se:0": {
+    "lat": "0.9151475219726563",
+    "enrg": "1.1732960066795348"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:64-expand:4-kernel:3-stride:2-use_se:0": {
+    "lat": "0.9154722900390625",
+    "enrg": "1.1744378890991212"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:64-expand:4-kernel:7-stride:2-use_se:0": {
+    "lat": "0.906145263671875",
+    "enrg": "1.31600506067276"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:96-expand:6-kernel:3-stride:2-use_se:0": {
+    "lat": "0.959166748046875",
+    "enrg": "1.310737051010132"
+    },
+    "MBConvLayer-input:1_16_14_14-in_ch:16-out_ch:24-mid_ch:96-expand:6-kernel:7-stride:2-use_se:0": {
+    "lat": "0.9490834350585937",
+    "enrg": "1.6724849004745483"
+    },
+    "ConvLayer-input:1_1_20_20-in_ch:1-out_ch:16-kernel:3-stride:2-use_se:0-use_bn:1": {
+    "lat": "0.48897409057617186",
+    "enrg": "0.7824562735557556"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:16-mid_ch:0-expand:1-kernel:3-stride:1-use_se:0": {
+    "lat": "0.5642789306640625",
+    "enrg": "0.7917865152359009"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:48-expand:3-kernel:5-stride:2-use_se:0": {
+    "lat": "0.9215593872070312",
+    "enrg": "1.1598004522323608"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:144-expand:6-kernel:5-stride:1-use_se:0": {
+    "lat": "0.95435498046875",
+    "enrg": "1.2589658455848693"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:96-expand:4-kernel:7-stride:1-use_se:0": {
+    "lat": "0.9759806518554688",
+    "enrg": "1.296844934463501"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:96-expand:4-kernel:3-stride:1-use_se:0": {
+    "lat": "0.9425842895507812",
+    "enrg": "1.2040880970954895"
+    },
+    "ConvLayer-input:1_24_5_5-in_ch:24-out_ch:40-kernel:1-stride:1-use_se:0-use_bn:1": {
+    "lat": "0.5090257873535157",
+    "enrg": "0.7947966828346252"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:48-expand:3-kernel:3-stride:2-use_se:0": {
+    "lat": "0.9095023803710938",
+    "enrg": "1.1283670773506165"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:72-expand:3-kernel:5-stride:1-use_se:0": {
+    "lat": "0.9235814208984375",
+    "enrg": "1.1509441590309144"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:64-expand:4-kernel:7-stride:2-use_se:0": {
+    "lat": "0.9205402221679687",
+    "enrg": "1.2022037315368652"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:48-expand:3-kernel:7-stride:2-use_se:0": {
+    "lat": "0.9182867431640624",
+    "enrg": "1.1770514092445374"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:72-expand:3-kernel:7-stride:1-use_se:0": {
+    "lat": "0.9175173950195312",
+    "enrg": "1.1785785179138184"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:144-expand:6-kernel:3-stride:1-use_se:0": {
+    "lat": "0.9520050659179687",
+    "enrg": "1.224907295703888"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:96-expand:6-kernel:3-stride:2-use_se:0": {
+    "lat": "0.9744191284179687",
+    "enrg": "1.2282523980140687"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:144-expand:6-kernel:7-stride:1-use_se:0": {
+    "lat": "0.9575990600585937",
+    "enrg": "1.3595955815315246"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:96-expand:6-kernel:5-stride:2-use_se:0": {
+    "lat": "0.9532911987304687",
+    "enrg": "1.3050504364967346"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:96-expand:4-kernel:5-stride:1-use_se:0": {
+    "lat": "0.9551971435546875",
+    "enrg": "1.239349886894226"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:64-expand:4-kernel:3-stride:2-use_se:0": {
+    "lat": "0.9163807373046875",
+    "enrg": "1.146348596572876"
+    },
+    "MBConvLayer-input:1_24_5_5-in_ch:24-out_ch:24-mid_ch:72-expand:3-kernel:3-stride:1-use_se:0": {
+    "lat": "0.9040796508789063",
+    "enrg": "1.1276572194099426"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:64-expand:4-kernel:5-stride:2-use_se:0": {
+    "lat": "0.920203857421875",
+    "enrg": "1.1850925493240356"
+    },
+    "MBConvLayer-input:1_16_10_10-in_ch:16-out_ch:24-mid_ch:96-expand:6-kernel:7-stride:2-use_se:0": {
+    "lat": "0.9585338134765625",
+    "enrg": "1.332423107624054"
+    }
+    }
+        

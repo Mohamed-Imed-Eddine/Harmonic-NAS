@@ -1,0 +1,89 @@
+small_dataset: False
+
+_type: 'avmnist'
+supernet_arch: 'ofa'
+arch: 'supernet_dynamic_model'
+
+pretrained_path: "./saved_supernets/MM-IMDB/supernet_imdb_image.pth.tar"
+maxout_weights: "./saved_supernets/MM-IMDB/imdb_text_maxout.pt"
+hw_lut_path: "./evaluate/backbone_eval/efficiency/lut_ofa_imdb_tx2.json"
+fusion_lut: "./evaluate/fusion_eval/lut_fusion_tx2.json"
+
+batch_size: 16
+batch_size_per_gpu: 16
+post_bn_calibration_batch_num: 64
+
+augment: "auto_augment_tf"
+
+bn_momentum: 0.1
+bn_eps: 1e-5
+
+distributed: False
+distributed_val: False
+eval_only: True
+multiprocessing_distributed: True
+
+dropout: 0.2
+
+#### cloud training resources  ####
+data_loader_workers_per_gpu: 1
+
+### multimodal dataset ###
+modality: 0
+dataset: 'imdb'
+dataset_dir: "/home/imed/Desktop/datasets/MM-IMDB/Pre_processed"
+n_classes: 23
+drop_last: True
+task : 'multilabel'
+resolution: 224
+in_channels: 3
+
+print_freq: 10
+seed: 42
+
+## search hyperparameters
+evo_search_outer:
+    parent_popu_size: 128
+    survival_ratio: .3
+    mutate_size: 64
+    crossover_size: 64
+    mutate_prob: 0.4
+    crossover_prob: 0.8
+    evo_iter: 4
+
+evo_search_inner:
+    survival_ratio: 0.25
+
+
+# ------------Fusion search parameters
+
+fusion_epochs: 50
+
+
+C : 192
+L : 16
+multiplier : 2
+steps : 2
+node_steps : 1
+node_multiplier : 1
+
+num_outputs : 23
+f1_type : 'weighted'
+drpt : 0.1
+
+num_input_nodes : 6
+num_keep_edges : 2
+
+arch_learning_rate : 0.0003
+arch_weight_decay : 0.001
+
+weight_decay : 0.0001
+eta_max : 0.0001 
+eta_min : 0.000001
+Ti : 1
+Tm : 2
+
+parallel : False
+
+
+save : ''
