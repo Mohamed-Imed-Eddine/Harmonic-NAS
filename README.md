@@ -16,7 +16,7 @@
 Harmonic-NAS/
  ├── backbones/
  |    ├── maxout/ --- Our Maxout network configuration
- |    └── ofa/ --- Original scripts from once-for-all for supernet specifications
+ |    └── ofa/ --- Essential scripts from once-for-all for supernet specifications
  | 
  ├── configs/ --- Running configs for Harmonic-NAS search
  ├── data/ --- Essential scripts for data loading for our various datasets
