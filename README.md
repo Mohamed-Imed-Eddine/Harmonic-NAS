@@ -1,8 +1,11 @@
 # Harmonic-NAS
-*Harmonic-NAS* is a novel framework for the design of multimodal neural networks on resource-constrained devices. It employs a two-tier optimization strategy with an outer evolutionary search stage for the unimodal backbone networks and an inner differentiable search stage for the multimodal fusion network architecture. *Harmonic-NAS* also includes the hardware dimension in its optimization procedure by assessing the inference latency and energy consumption.
+*Harmonic-NAS* is a novel framework for the design of multimodal neural networks on resource-constrained devices. It employs a two-tier optimization strategy with a first-stage evolutionary search for the unimodal backbone networks and a second-stage differentiable search for the multimodal fusion network architecture. *Harmonic-NAS* also includes the hardware dimension within its optimization procedure by including the inference latency and energy consumption as optimization objectives for an optimal deployment on resource-constrained devices.
 
 ![framework](framework-1.png)
 
+ # Paper and Supplementary
+
+Please find our arXiv version [here](https://arxiv.org/abs/2309.06612) for the full paper with additional results. Our paper has been accepted for publication in the 15th Asian Conference on Machine Learning (ACML 2023)
 
 
 # Requirements
@@ -37,17 +40,17 @@ Harmonic-NAS/
 The following table provides a list of the employed backbones and supernets with their weights:
 | Dataset | Modality | Baseline Model Architecture| Max subnet Accuracy | Pretrained weights |
 |:---:|:---:|:---:|:---:|:---:|
-| AV-MNIST | Image | ofa_mbv3_d234_e346_k357_w1.0 | 86.44 | [Link](https://drive.google.com/file/d/1ff9-jsQ4shX7WwGZJZSXFAPQpET7Ek0k/view?usp=drive_link) |
-| AV-MNIST | Audio | ofa_mbv3_d234_e346_k357_w1.0 | 88.22 | [Link](https://drive.google.com/file/d/1ytXHYMc2KKg1phGOLCzqIKcJP-5VmNOw/view?usp=drive_link) |
-| MM-IMDB | Image | ofa_mbv3_d234_e346_k357_w1.2 | 46.26 | [Link](https://drive.google.com/file/d/1JnCFxZHNZA6AfkpfuxbGTeAgZQCi59gR/view?usp=drive_link) |
-| MM-IMDB | Text | Maxout | 61.21 | [Link](https://drive.google.com/file/d/1hR7o-UeuLasLyeNBsr181ALaAjOCLRIc/view?usp=drive_link) |
-| Memes_Politics | Image | ofa_mbv3_d234_e346_k357_w1.0 | 84.78 | [Link](https://drive.google.com/file/d/14RYsdyVWmoTzgmQIoMDaP1ztHXPdNOZw/view?usp=drive_link) |
-| Memes_Politics | Text | Maxout | 83.38 | [Link](https://drive.google.com/file/d/1GlHRzPmMTa-BPx6n8gDTH79PXR54PxWy/view?usp=drive_link) |
+| AV-MNIST | Image | ofa_mbv3_d234_e346_k357_w1.0 | TOP1-Acc: 86.44% | [Link](https://drive.google.com/file/d/1ff9-jsQ4shX7WwGZJZSXFAPQpET7Ek0k/view?usp=drive_link) |
+| AV-MNIST | Audio | ofa_mbv3_d234_e346_k357_w1.0 | TOP1-Acc: 88.22% | [Link](https://drive.google.com/file/d/1ytXHYMc2KKg1phGOLCzqIKcJP-5VmNOw/view?usp=drive_link) |
+| MM-IMDB | Image | ofa_mbv3_d234_e346_k357_w1.2 | F1-W: 46.26% | [Link](https://drive.google.com/file/d/1JnCFxZHNZA6AfkpfuxbGTeAgZQCi59gR/view?usp=drive_link) |
+| MM-IMDB | Text | Maxout | F1-W: 61.21% | [Link](https://drive.google.com/file/d/1hR7o-UeuLasLyeNBsr181ALaAjOCLRIc/view?usp=drive_link) |
+| Memes_Politics | Image | ofa_mbv3_d234_e346_k357_w1.0 | TOP1-Acc: 84.78% | [Link](https://drive.google.com/file/d/14RYsdyVWmoTzgmQIoMDaP1ztHXPdNOZw/view?usp=drive_link) |
+| Memes_Politics | Text | Maxout | TOP1-Acc: 83.38% | [Link](https://drive.google.com/file/d/1GlHRzPmMTa-BPx6n8gDTH79PXR54PxWy/view?usp=drive_link) |
 
 # Dataset Pre-processing
 
 ## AV-MNIST dataset: 
-Donwload the AV-MNIST from the original repo [SMIL](https://github.com/mengmenm/SMIL) , or direcly from [Link](https://drive.google.com/file/d/1JTS--8d_BxzZfhQfSAAYeYTjCdUbJyuD/view).
+Donwload the AV-MNIST dataset by following the instructions provided in [SMIL](https://github.com/mengmenm/SMIL) ,or uploed it direcly from [Here](https://drive.google.com/file/d/1JTS--8d_BxzZfhQfSAAYeYTjCdUbJyuD/view).
 
 ## MM-IMDB dataset: 
 Download the **multimodal_imdb.hdf5** file from the original repo of [MM-IMDB](https://github.com/johnarevalo/gmu-mmimdb) using the [Link](https://archive.org/download/mmimdb/multimodal_imdb.hdf5).<br>
@@ -57,8 +60,8 @@ Use the pre-processing script to split the dataset.
 $ python data/mmimdb/prepare_mmimdb.py
 ```
 
-## Memes-Polotics dataset: 
-Download the different files for Meme Images and Annotations <br><br>
+## Memes-Politics dataset: 
+To download the different files for Meme Images and Annotations <br><br>
 Harm-P: [Link](https://drive.google.com/file/d/1fw850yxKNqzpRpQKH88D13yfrwX1MLde/view?usp=sharing)
 
 Entity features: [Link](https://drive.google.com/file/d/1KBltp_97CJIOcrxln9VbDfoKxbVQKcVN/view?usp=sharing)
@@ -66,7 +69,7 @@ Entity features: [Link](https://drive.google.com/file/d/1KBltp_97CJIOcrxln9VbDfo
 ROI features: [Link](https://drive.google.com/file/d/1KRAJcTme4tmbuNXLQ72NTfnQf3x2YQT_/view?usp=sharing)
 
 
-Download the required vocabulary file:
+To download the required vocabulary file:
 ```shell
 $ wget https://openaipublic.azureedge.net/clip/bpe_simple_vocab_16e6.txt.gz -O bpe_simple_vocab_16e6.txt.gz
 ```
@@ -74,8 +77,8 @@ $ wget https://openaipublic.azureedge.net/clip/bpe_simple_vocab_16e6.txt.gz -O b
 
 
 # Run Experiments
-In Harmonic-NAS, we conducted experiments within a distributed environment. To replicate these experiments, follow these steps:<br>
-Modify the configuration file located in [./configs](./configs) to match your desired settings.<br>
+In Harmonic-NAS, we conducted experiments within a distributed environment (i.e., clusters of GPUs). To replicate these experiments, follow these steps:<br>
+Modify the configuration file located in [./configs](./configs) to match your customized settings.<br>
 Run the following command to initiate the Harmonic-NAS search.
 ```shell
 $ python search_algo_DATASET.py
