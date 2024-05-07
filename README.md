@@ -119,10 +119,12 @@ You can simply visulize the found fusion architectures by setting `plot_arch=Tru
 # Citation
 If you find this implementation helpful, please consider citing our work:
 ```BibTex
-@article{ghebriout2023harmonic,
+@inproceedings{ghebriout2024harmonic,
   title={Harmonic-NAS: Hardware-Aware Multimodal Neural Architecture Search on Resource-constrained Devices},
   author={Ghebriout, Mohamed Imed Eddine and Bouzidi, Halima and Niar, Smail and Ouarnoughi, Hamza},
-  journal={arXiv preprint arXiv:2309.06612},
-  year={2023}
+  booktitle={Asian Conference on Machine Learning},
+  pages={374--389},
+  year={2024},
+  organization={PMLR}
 }
 ```
